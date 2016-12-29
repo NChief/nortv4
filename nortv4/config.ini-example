@@ -1,4 +1,14 @@
 ; COPY THIS FILE TO config.ini
+[bot]
+server=irc.lol.lol
+port=6697
+ssl=no
+nick=NorTV2
+name=NorTV2
+user=NorTV2
+nickserv_password=
+oper_password=
+oper_user=
 ; Channel config
 [channel #lol]
 key=

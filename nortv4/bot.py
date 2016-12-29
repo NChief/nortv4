@@ -7,6 +7,11 @@ config.read('config.ini')
 
 ct = Configtools(config)
 
-channels = ct.GetChannels();
+channels = ct.GetChannels()
 
-#bot = irc.connect()
+bot = irc.connect(config['bot'].get('server'), config['bot'].getint('port'), use_ssl=config['bot'].getboolean('ssl'))
+bot.register(config['bot'].get('nick'), config['bot'].get('user'), config['bot'].get('name'))
+bot.join(list(channels.keys()))
+
+import asyncio
+asyncio.get_event_loop().run_forever()
