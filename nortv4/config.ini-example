@@ -1,0 +1,7 @@
+; COPY THIS FILE TO config.ini
+; Channel config
+[channel #lol]
+key=
+
+[channel #test]
+key=
